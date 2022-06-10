@@ -1,5 +1,7 @@
 import sys
 import pygame
+from settings import Settings
+
 
 class Invasion():
     # init function
