@@ -1,3 +1,5 @@
+import pygame
+
 class Settings():
     #  This class stores all the settings to run the game
 
