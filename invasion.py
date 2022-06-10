@@ -7,11 +7,9 @@ class Invasion():
     # init function
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((1200, 800))
+        self.settings = Settings()
+        self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption('Invasion')
-
-        # Background Color
-        self.bg_color = (230, 230, 230)
 
     def rungame(self):
         while True:
@@ -20,7 +18,7 @@ class Invasion():
                     sys.exit()
             
             # Redrawing the color at every pass of the loop
-            self.screen.fill(self.bg_color)
+            self.screen.fill(self.settings.bg_color)
             
             pygame.display.flip()
 
