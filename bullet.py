@@ -8,7 +8,7 @@ class Bullet(Sprite):
         self.settings = ig_game.settings
         self.color = ig_game.settings.bullet_color
         
-        self.rect = pygame.rect(0,0, ig_game.settings.bullet_width, ig_game.settings.bullet_height)
+        self.rect = pygame.Rect(0,0, ig_game.settings.bullet_width, ig_game.settings.bullet_height)
         self.rect.midtop = ig_game.fighter.rect.midtop
         self.y = float(self.rect.y)
 
@@ -18,4 +18,3 @@ class Bullet(Sprite):
 
     def draw_bullet(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
-        
