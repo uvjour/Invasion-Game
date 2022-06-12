@@ -2,6 +2,8 @@ import sys
 import pygame
 from settings import Settings
 from fighter import Fighter
+from bullet import Bullet
+
 
 class Invasion():
     # init function
@@ -13,12 +15,17 @@ class Invasion():
         self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption('Invasion')
         self.fighter = Fighter(self)
+        self.bullets = pygame.sprite.Group()
+
+
+
 
     def rungame(self):
         while True:
             self._check_events()
             self.fighter.update()
             self._update_screen()
+            self.bullet.update()
 
 
 
