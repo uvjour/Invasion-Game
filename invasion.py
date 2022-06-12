@@ -59,8 +59,6 @@ class Invasion():
             self.fighter.moving_left = False
 
 
-
-
     def _update_screen(self):
         # Redrawing the color at every pass of the loop
         self.screen.fill(self.settings.bg_color)
@@ -71,8 +69,9 @@ class Invasion():
         pygame.display.flip()
 
     def _fire_bullet(self):
-        new_bullet = Bullet(self)
-        self.bullets.add(new_bullet)
+        if len(self.bullets) < self.settings.bullets_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
 
 
 
