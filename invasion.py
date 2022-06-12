@@ -63,7 +63,7 @@ class Invasion():
         # Redrawing the color at every pass of the loop
         self.screen.fill(self.settings.bg_color)
         self.fighter.blitme()
-        for bullet in self.bullet.sprites():
+        for bullet in self.bullets.sprites():
             bullet.draw_bullet()
 
         pygame.display.flip()
