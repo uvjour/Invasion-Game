@@ -11,11 +11,11 @@ class Invasion():
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption('Invasion')
         self.fighter = Fighter(self)
-        self.fighter.update()
 
     def rungame(self):
         while True:
             self._check_events()
+            self.fighter.update()
             self._update_screen()
 
 
