@@ -25,7 +25,7 @@ class Invasion():
             self._check_events()
             self.fighter.update()
             self._update_screen()
-            self.bullet.update()
+            self.bullets.update()
 
 
 
