@@ -6,7 +6,7 @@ class Enemy(Sprite):
         super().__init__()
         self.screen = ig_game.screen
 
-        self.image = pygame.image.load('/images/enemy.bmp')
+        self.image = pygame.image.load('images/enemy.bmp')
         self.rect = self.image.get_rect()
         
         self.rect.x = self.rect.height
