@@ -85,11 +85,16 @@ class Invasion():
         number_enemy_x = available_space_x // (2 * enemy_width)
 
         for enemy_number in range(number_enemy_x):
-            enemy = Enemy(self)
-            enemy.x = enemy_width + 2 * enemy_width * enemy_number
-            enemy.rect.x = enemy.x
-            self.enemies.add(enemy)
-        
+            self._create_enemy(enemy_number)
+
+    def _create_enemy(self, enemy_number):
+        enemy = Enemy(self)
+        enemy_width = enemy.rect.width
+        enemy.x = enemy_width + 2 * enemy_width * enemy_number
+        enemy.rect.x = enemy.x
+        self.enemies.add(enemy)
+
+
 
 
 if __name__ == '__main__':
