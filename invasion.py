@@ -16,7 +16,7 @@ class Invasion():
         pygame.display.set_caption('Invasion')
         self.fighter = Fighter(self)
         self.bullets = pygame.sprite.Group()
-        self.enemy = pygame.sprite.Group()
+        self.enemies = pygame.sprite.Group()
         self._create_fleet()
 
 
@@ -63,7 +63,7 @@ class Invasion():
         self.fighter.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
-            self.enemy.draw(self.screen)
+            self.enemies.draw(self.screen)
         pygame.display.flip()
 
     def _fire_bullet(self):
