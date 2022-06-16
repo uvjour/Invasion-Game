@@ -81,11 +81,11 @@ class Invasion():
     def _create_fleet(self):
         enemy = Enemy(self)
         enemy_width = enemy.rect.width
-        available_space_x = self.settings.screen.width - (2 * enemy_width)
+        available_space_x = self.settings.screen_width - (2 * enemy_width)
         number_enemy_x = available_space_x // (2 * enemy_width)
 
         for enemy_number in range(number_enemy_x):
-            enemy = enemy(self)
+            enemy = Enemy(self)
             enemy.x = enemy_width + 2 * enemy_width * enemy_number
             enemy.rect.x = enemy.x
             self.enemies.add(enemy)
